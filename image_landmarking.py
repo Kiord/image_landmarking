@@ -47,7 +47,7 @@ def get_image_paths_dict(images_dir_path):
 def imread(f):
     print('reading', f)
     img = cv2.imread(f)
-    code = cv2.COLOR_GRAY2RGB if len(img.shape==2) else cv2.COLOR_BGR2RGB
+    code = cv2.COLOR_GRAY2RGB if len(img.shape)==2 else cv2.COLOR_BGR2RGB
     img = cv2.cvtColor(img, code)
     return img
 
