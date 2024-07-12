@@ -23,7 +23,7 @@ COMMANDS = \
     '|- left arrow\t\t: previous image                                   \n'\
     '+--------------------------------------------------------------------\n'
 
-IMAGE_EXTENSIONS=('jpg','jpeg', 'jp2', 'png', 'tiff', 'tif', 'pbm', 'pgm', 'ppm', 'sr', 'ras', 'jfif')
+IMAGE_EXTENSIONS=('jpg','jpeg', 'jpe', 'jp2', 'png', 'tiff', 'tif', 'pbm', 'pgm', 'ppm', 'sr', 'ras', 'jfif', 'tiff', 'tif', 'bmp', 'dib')
 
 class Dimensions:
     def __init__(self, display_width, imshape):
@@ -46,9 +46,9 @@ def get_image_paths_dict(images_dir_path):
 
 def imread(f):
     print('reading', f)
-    img = cv2.cvtColor(cv2.imread(f), cv2.COLOR_BGR2RGB)
-    if img.shape[0] > img.shape[1]:
-        img = img.swapaxes(0, 1)
+    img = cv2.imread(f)
+    code = cv2.COLOR_GRAY2RGB if len(img.shape==2) else cv2.COLOR_BGR2RGB
+    img = cv2.cvtColor(img, code)
     return img
 
 def local_to_global_coordinates(xy, scale, tx, ty, dimensions):
