@@ -30,7 +30,7 @@ The controls are displayed in the console when launching the application.
 | right click  | Place a landmark under the cursor  |
 | left click | Grab a landmark under the cursor |
 | mouse wheel    | zoom   |
-| wheel click    | translation  |
+| wheel click and drag   | translation  |
 | lctrl + left click    | Falg landmark as occluded  |
 | backspace    | remove last placed landmark |
 | c    | clear the landmarks on the current image |
