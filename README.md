@@ -46,7 +46,7 @@ Landmarks are color coded to ease the process.
 | -------- | ------- |
 | blue  | Default |
 | magenta | Last placed |
-| green or orange | Flagged as occulded |
+| green or orange | Flagged as occluded |
 
 
 ## Requirements
